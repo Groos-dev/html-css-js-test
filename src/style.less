@@ -1,0 +1,140 @@
+@color: #4caf50;
+@temp: #ffffff;
+div {
+  text-align: center;
+}
+.margin-top-space {
+  margin-top: 30px;
+}
+
+.vertically-centered {
+  .case1 {
+    background-color: wheat;
+    height: 50px;
+    line-height: 50px;
+    span {
+    }
+  }
+  .case2 {
+    background-color: wheat;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    .son {
+      background-color: #4caf50;
+      position: absolute;
+      top: 50%;
+      right: 50%;
+      transform: translateY(-50%) translateX(50%);
+    }
+    .row {
+      position: absolute;
+      top: 50%;
+      background-color: aqua;
+      width: 100%;
+      height: 1px;
+    }
+    .col {
+      position: absolute;
+      right: 50%;
+      background-color: yellow;
+      width: 1px;
+      height: 100%;
+    }
+  }
+  .case3 {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+    .son {
+      position: absolute;
+      background-color: azure;
+      height: 100px;
+      width: 100px;
+      line-height: 100px;
+      margin: auto;
+      top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
+    }
+  }
+  .case4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    background-color: rebeccapurple;
+    .son {
+      background-color: azure;
+      height: 100px;
+      line-height: 100px;
+      width: 100px;
+    }
+  }
+}
+.two-col-layout {
+  .float-margin {
+    .left {
+      float: left;
+      background-color: #ff23ff;
+      width: 100px;
+      height: 500px;
+    }
+    .right {
+      background-color: antiquewhite;
+      height: 500px;
+      margin-left: 100px;
+    }
+  }
+  .float-margin-fix {
+    .left {
+      float: left;
+      background-color: #ff23ff;
+      width: 100px;
+      height: 500px;
+      position: relative;
+      z-index: 10;
+      .item {
+        height: 50px;
+        width: 100%;
+        margin-top: 100px;
+        background-color: #3038a5;
+      }
+    }
+
+    .right-fix {
+      background-color: rgb(73, 135, 135);
+      float: right;
+      width: 100%;
+      margin-left: -100px;
+      position: relative;
+      z-index: 1;
+      .right {
+        margin-left: 100px; /*大于或等于#left的宽度,才不会遮挡#left*/
+        background-color: #0f0;
+        height: 500px;
+        .item {
+          height: 50px;
+          width: 100%;
+          background-color: #3038a5;
+        }
+      }
+    }
+  }
+  .float-overflow {
+    .left {
+      float: left;
+      width: 100px;
+      height: 500px;
+      background-color: #4caf50;
+    }
+    .right {
+      height: 500px;
+      overflow: hidden;
+      background-color: #ff23ff;
+    }
+  }
+}
